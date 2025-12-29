@@ -46,16 +46,24 @@ This project is designed with **clean architecture**, **database-driven UI**, an
 
 The application follows a **layered architecture**:
 
-Controller (Servlets)
-↓
-Service Layer
-↓
-DAO Layer (JPA / Hibernate)
-↓
-Database (MySQL)
-
-markdown
-Copy code
+┌─────────────────┐
+│   Controller    │ ← Servlets
+│    (Servlets)   │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│  Service Layer  │ ← Business Logic
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│  DAO Layer      │ ← JPA / Hibernate
+│  (Data Access)  │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│   Database      │ ← MySQL
+│   (MySQL)       │
+└─────────────────┘
 
 ### Key Design Principles
 - Separation of concerns
@@ -93,33 +101,108 @@ Copy code
 
 Online_Banking_System/
 │
-├── src/main/java
-│ ├── com.bank.controller
-│ ├── com.bank.controller.admin
-│ ├── com.bank.service
-│ ├── com.bank.service.impl
-│ ├── com.bank.dao
-│ ├── com.bank.model
-│ └── com.bank.util
+├── src/main/java/
+│   ├── com/bank/
+│   │   ├── controller/
+│   │   │   ├── user/
+│   │   │   │   ├── LoginServlet.java
+│   │   │   │   ├── RegisterServlet.java
+│   │   │   │   ├── DashboardServlet.java
+│   │   │   │   ├── AccountServlet.java
+│   │   │   │   ├── TransactionServlet.java
+│   │   │   │   └── StatementServlet.java
+│   │   │   │
+│   │   │   └── admin/
+│   │   │       ├── AdminLoginServlet.java
+│   │   │       ├── AdminDashboardServlet.java
+│   │   │       ├── UserManagementServlet.java
+│   │   │       ├── AccountManagementServlet.java
+│   │   │       └── TransactionManagementServlet.java
+│   │   │
+│   │   ├── service/
+│   │   │   ├── UserService.java
+│   │   │   ├── AccountService.java
+│   │   │   ├── TransactionService.java
+│   │   │   └── AdminService.java
+│   │   │
+│   │   ├── service/impl/
+│   │   │   ├── UserServiceImpl.java
+│   │   │   ├── AccountServiceImpl.java
+│   │   │   ├── TransactionServiceImpl.java
+│   │   │   └── AdminServiceImpl.java
+│   │   │
+│   │   ├── dao/
+│   │   │   ├── UserDAO.java
+│   │   │   ├── AccountDAO.java
+│   │   │   ├── TransactionDAO.java
+│   │   │   └── GenericDAO.java
+│   │   │
+│   │   ├── model/
+│   │   │   ├── User.java
+│   │   │   ├── Account.java
+│   │   │   ├── Transaction.java
+│   │   │   ├── Admin.java
+│   │   │   └── enums/
+│   │   │       ├── AccountType.java
+│   │   │       └── TransactionType.java
+│   │   │
+│   │   └── util/
+│   │       ├── DatabaseUtil.java
+│   │       ├── SessionUtil.java
+│   │       └── ValidationUtil.java
+│   │
+│   └── resources/
+│       └── META-INF/
+│           └── persistence.xml
 │
-├── src/main/webapp
-│ ├── admin/
-│ │ ├── admin-dashboard.jsp
-│ │ ├── admin-users.jsp
-│ │ ├── admin-accounts.jsp
-│ │ └── admin-transactions.jsp
-│ │
-│ ├── css/
-│ ├── js/
-│ ├── dashboard.jsp
-│ ├── create-account.jsp
-│ ├── login.html
-│ └── register.html
+├── src/main/webapp/
+│   ├── WEB-INF/
+│   │   ├── web.xml
+│   │   └── lib/ (dependencies)
+│   │
+│   ├── css/
+│   │   ├── style.css
+│   │   ├── dashboard.css
+│   │   └── admin.css
+│   │
+│   ├── js/
+│   │   ├── validation.js
+│   │   ├── dashboard.js
+│   │   └── admin.js
+│   │
+│   ├── admin/
+│   │   ├── admin-login.jsp
+│   │   ├── admin-dashboard.jsp
+│   │   ├── manage-users.jsp
+│   │   ├── manage-accounts.jsp
+│   │   └── view-transactions.jsp
+│   │
+│   ├── user/
+│   │   ├── login.jsp
+│   │   ├── register.jsp
+│   │   ├── dashboard.jsp
+│   │   ├── create-account.jsp
+│   │   ├── deposit.jsp
+│   │   ├── withdraw.jsp
+│   │   ├── transfer.jsp
+│   │   ├── statements.jsp
+│   │   └── change-pin.jsp
+│   │
+│   ├── partials/
+│   │   ├── header.jsp
+│   │   ├── footer.jsp
+│   │   └── navigation.jsp
+│   │
+│   ├── index.jsp
+│   └── error.jsp
 │
-└── persistence.xml
-
-yaml
-Copy code
+├── src/main/resources/
+│   └── sql/
+│       └── database-schema.sql
+│
+├── pom.xml (Maven configuration)
+├── README.md
+└── .gitignore
 
 ---
 
@@ -144,9 +227,6 @@ Copy code
 6. Access the application:
 
 http://localhost:8080/Online_Banking_System
-
-yaml
-Copy code
 
 ---
 
@@ -179,7 +259,6 @@ Copy code
 Java Developer | Full-Stack Developer  
 
 📧 Email: rohithkumarpaswan1921@gmail.com  
-🔗 LinkedIn: *(add your LinkedIn profile link here)*  
 
 ---
 

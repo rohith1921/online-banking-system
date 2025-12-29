@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+.admin-app {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 240px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 24px;
+}
+
+.admin-sidebar .logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 32px;
+}
+
+.admin-sidebar nav a {
+  display: block;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: var(--text-main);
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.admin-sidebar nav a:hover {
+  background: #EEF4FF;
+  color: var(--primary);
+}
+
+.admin-sidebar nav a.danger {
+  color: var(--danger);
+}
+
+.admin-content {
+  flex: 1;
+  padding: 32px;
+}
+
+/* Dashboard cards */
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.admin-card h3 {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.admin-metric {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.admin-metric.warning {
+  color: var(--warning);
+}
+
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.admin-table th {
+  background: #F3F6FF;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.admin-table tr:hover {
+  background: #FAFBFF;
+}
+
+
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.pending {
+  background: #FFF4E5;
+  color: #FF9800;
+}
+
+.status.active {
+  background: #E6F7F0;
+  color: #00A86B;
+}
+
+.status.closed {
+  background: #FDECEA;
+  color: #E03A3A;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.filter-card form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.status.credit {
+  background: #E6F7F0;
+  color: #00A86B;
+}
+
+.status.debit {
+  background: #FDECEA;
+  color: #E03A3A;
+}
+

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.form-card {
+  max-width: 480px;
+}
+
+.form-card label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-card .input {
+  margin-bottom: 16px;
+}

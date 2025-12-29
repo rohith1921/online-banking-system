@@ -1,0 +1,18 @@
+package com.bank.util;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class JpaUtil {
+	private static final EntityManagerFactory emf;
+	
+	static {
+		emf = Persistence.createEntityManagerFactory("Online_Banking_System");
+	}
+	
+	public static EntityManager getEntityManager() {
+		return emf.createEntityManager(); 
+	}
+
+}

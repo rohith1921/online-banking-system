@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+:root {
+  /* Colors */
+  --primary: #0B5FFF;
+  --success: #00A86B;
+  --warning: #FFB020;
+  --danger: #E03A3A;
+
+  --bg: #F7F9FB;
+  --surface: #FFFFFF;
+  --border: #E6E9EE;
+
+  --text-main: #111827;
+  --text-muted: #6B7280;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+
+  /* Shadows */
+  --shadow-md: 0 6px 18px rgba(16,24,40,0.06);
+
+  /* Spacing (8px grid) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+}

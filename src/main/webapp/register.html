@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register · MyBank</title>
+
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body class="auth-page">
+
+<div class="auth-container">
+
+  <!-- Left: help / trust / steps summary -->
+  <div class="auth-left">
+    <h1 class="brand">Get started</h1>
+    <p class="muted">Open an account in minutes. Secure and KYC-safe.</p>
+
+    <div class="ks-steps">
+      <div class="step"><strong>1</strong> Contact details</div>
+      <div class="step"><strong>2</strong> Identity (optional)</div>
+      <div class="step"><strong>3</strong> Set credentials</div>
+      <div class="step"><strong>4</strong> Confirmation</div>
+    </div>
+
+    <p class="muted small">Keep your ID & phone handy for quick verification.</p>
+  </div>
+
+  <!-- Right: form -->
+  <div class="auth-right">
+    <div class="card auth-card">
+
+      <h2>Create account</h2>
+      <p class="muted">Open your MyBank account</p>
+
+      <div id="message"></div>
+
+      <form action="register" method="post" id="registerForm" novalidate>
+        <label>Full Name</label>
+        <input class="input" type="text" name="name" required />
+
+        <label>Email</label>
+        <input class="input" type="email" name="email" required />
+
+        <label>Mobile Number</label>
+        <input class="input" type="tel" name="mobile" pattern="[6-9][0-9]{9}" required />
+
+        <label>Password</label>
+        <input class="input" type="password" name="password" required />
+
+        <button class="btn-primary" type="submit">Register</button>
+      </form>
+
+      <p class="small">
+        Already have an account? <a href="login.html">Sign in</a>
+      </p>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="js/message.js"></script>
+</body>
+</html>

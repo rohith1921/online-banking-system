@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign in · MyBank</title>
+
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body class="auth-page">
+
+<div class="auth-container">
+
+  <!-- Left: branding / trust -->
+  <div class="auth-left">
+    <h1 class="brand">MyBank</h1>
+    <p class="muted">
+      Secure, reliable banking — trusted by thousands.
+    </p>
+
+    <ul class="trust-list">
+      <li>✔ Bank-grade security</li>
+      <li>✔ Instant transfers</li>
+      <li>✔ 24/7 access</li>
+    </ul>
+
+    <div class="auth-cta">
+      <p class="small muted">Need help?</p>
+      <a class="link-secondary" href="help.html">Contact Support</a>
+    </div>
+  </div>
+
+  <!-- Right: form -->
+  <div class="auth-right">
+    <div class="card auth-card">
+
+      <h2>Sign in</h2>
+      <p class="muted">Access your account securely</p>
+
+      <!-- server messages (success / error) -->
+      <div id="message"></div>
+
+      <form action="login" method="post" id="loginForm" novalidate>
+        <label>Email or Mobile</label>
+        <input class="input" type="text" name="email" required />
+
+        <label>Password</label>
+        <input class="input" type="password" name="password" required />
+
+        <div class="form-row space-between">
+          <label class="small"><input type="checkbox" name="remember" /> Remember me</label>
+          <a href="forgot-password.html" class="small">Forgot?</a>
+        </div>
+
+        <button class="btn-primary" type="submit">Sign in</button>
+      </form>
+
+      <div class="auth-footer">
+        <p class="small">Don’t have an account? <a href="register.html">Create one</a></p>
+        <p class="small">Admin? <a href="admin/admin-login.html">Sign in as Admin</a></p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="js/message.js"></script>
+</body>
+</html>

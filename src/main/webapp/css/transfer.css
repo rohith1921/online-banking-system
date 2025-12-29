@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* ===============================
+   TRANSFER PAGE
+   =============================== */
+
+.transfer-card {
+  max-width: 520px;
+}
+
+.transfer-card label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.transfer-card .input {
+  margin-bottom: 16px;
+}
+
+.transfer-card .btn-primary {
+  margin-top: 12px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .transfer-card {
+    max-width: 100%;
+  }
+}

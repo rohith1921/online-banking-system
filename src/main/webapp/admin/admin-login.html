@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Sign in · MyBank</title>
+
+  <link rel="stylesheet" href="../css/design-system.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/auth.css" />
+</head>
+<body class="auth-page">
+
+<div class="auth-container">
+
+  <div class="auth-left">
+    <h1 class="brand">Admin Panel</h1>
+    <p class="muted">Authorized personnel only.</p>
+  </div>
+
+  <div class="auth-right">
+    <div class="card auth-card">
+      <h2>Admin Sign in</h2>
+      <div id="message"></div>
+
+      <form action="../admin-login" method="post" id="adminLoginForm" novalidate>
+        <label>Username / Email</label>
+        <input class="input" type="text" name="email" required />
+
+        <label>Password</label>
+        <input class="input" type="password" name="password" required />
+
+        <button class="btn-primary" type="submit">Sign in as Admin</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<script src="../js/message.js"></script>
+</body>
+</html>

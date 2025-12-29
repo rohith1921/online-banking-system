@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* ===============================
+   BALANCE ENQUIRY PAGE
+   =============================== */
+
+.balance-card {
+  max-width: 480px;
+}
+
+.balance-card label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.balance-card .input {
+  margin-bottom: 16px;
+}
+
+.balance-result {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.balance-result h2 {
+  font-size: 32px;
+  margin-top: 8px;
+  color: var(--primary);
+}

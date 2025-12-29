@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* Auth pages */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  padding: var(--space-4);
+}
+
+.auth-card {
+  max-width: 420px;
+}
+
+/* Sidebar layout */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: var(--space-3);
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  margin-bottom: 6px;
+  text-decoration: none;
+  color: var(--text-main);
+  border-radius: var(--radius-sm);
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background: #EEF4FF;
+  color: var(--primary);
+}
+
+.content {
+  flex: 1;
+  padding: var(--space-4);
+}

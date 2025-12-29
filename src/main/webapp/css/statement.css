@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.statement-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+
+.statement-table th,
+.statement-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.statement-table th {
+  background: #F3F6FF;
+  font-weight: 600;
+}
+
+.statement-table tr:hover {
+  background: #F9FAFF;
+}
+
+
+.filter-form {
+  max-width: 520px;
+  margin-bottom: 24px;
+}
+
+.filter-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.filter-form .input {
+  margin-bottom: 16px;
+}

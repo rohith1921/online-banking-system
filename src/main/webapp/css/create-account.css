@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* ===============================
+   CREATE ACCOUNT PAGE
+   =============================== */
+
+.create-account-card {
+  max-width: 520px;
+}
+
+.create-account-card label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.create-account-card .input {
+  margin-bottom: 16px;
+}
+
+.create-account-card .btn-primary {
+  margin-top: 12px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .create-account-card {
+    max-width: 100%;
+  }
+}

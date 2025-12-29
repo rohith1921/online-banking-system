@@ -2,7 +2,7 @@
 
 A **full-stack Java web application** that simulates real-world online banking operations with **secure user authentication, account management, transactions, and admin control**, built using **Java, Servlets, JSP, JPA (Hibernate), MySQL, HTML, CSS, and JavaScript**.
 
-This project is designed with **clean architecture**, **database-driven UI**, and **industry-level banking workflows**, making it suitable for **interviews and production-style demos**.
+This project is designed with **clean architecture**, **database-driven UI**.
 
 ---
 
